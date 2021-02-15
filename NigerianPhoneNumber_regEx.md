@@ -1,4 +1,6 @@
-======================== JAVASCRIPT ===========================
+##  JAVASCRIPT 
+
+```js
 const regex = /^(0)([789])([0-9])([0-9]{8})|(\+234)([789])([0-9])([0-9]{8})$/;
 const str = `09037915328 +2349037915328`;
 let m;
@@ -14,8 +16,11 @@ while ((m = regex.exec(str)) !== null) {
         console.log(`Found match, group ${groupIndex}: ${match}`);
     });
 }
+```
 
-=========================== JAVA ============================
+## JAVA 
+
+```java
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -31,8 +36,10 @@ while (matcher.find()) {
         System.out.println("Group " + i + ": " + matcher.group(i));
     }
 }
+```
 
-===================== PHP ============================
+## PHP 
+```php
 $re = '/^(0)([789])([0-9])([0-9]{8})|(\+234)([789])([0-9])([0-9]{8})$/';
 $str = '09037915328 +2349037915328';
 
@@ -40,12 +47,13 @@ preg_match_all($re, $str, $matches, PREG_SET_ORDER, 0);
 
 // Print the entire match result
 var_dump($matches);
+```
+## PYTHON 
 
-====================== PYTHON =======================
+*coding=utf8*
+*the above tag defines encoding for this document and is for Python 2.x compatibility*
 
-# coding=utf8
-# the above tag defines encoding for this document and is for Python 2.x compatibility
-
+```python
 import re
 
 regex = r"^(0)([789])([0-9])([0-9]{8})|(\+234)([789])([0-9])([0-9]{8})$"
@@ -62,6 +70,7 @@ for matchNum, match in enumerate(matches, start=1):
         groupNum = groupNum + 1
         
         print ("Group {groupNum} found at {start}-{end}: {group}".format(groupNum = groupNum, start = match.start(groupNum), end = match.end(groupNum), group = match.group(groupNum)))
+```
 
-# Note: for Python 2.7 compatibility, use ur"" to prefix the regex and u"" to prefix the test string and substitution.
+*Note: for Python 2.7 compatibility, use ur"" to prefix the regex and u"" to prefix the test string and substitution.*
 
